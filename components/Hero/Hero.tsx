@@ -19,21 +19,40 @@ const Hero = () => {
           alt="Welcome to Zenscape"
         />
       </div>
-      <div className="container z-10 max-w-md lg:max-w-screen text-center">
-        <SplitText
-          text="Welcome to Zenscape."
-          className="text-7xl font-semibold text-center"
-          delay={100}
-          duration={0.6}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+      <div className="container z-10 max-w-screen h-screen flex justify-center items-center backdrop-blur-xs">
+        {/* title here */}
+        <div className="flex flex-col md:items-start gap-3 container md:px-20 px-5">
+          <SplitText
+            text="Zenscape"
+            className="text-7xl font-semibold text-center text-zinc-200 text-shadow-zinc-700 text-shadow-sm"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
+          />
+
+          {/* motto here */}
+          <SplitText
+            text="Here, your thoughts can settle like leaves on water."
+            className="text-xl font-light text-center text-zinc-300 italic text-shadow-zinc-700 text-shadow-sm"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="words"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
+          />
+        </div>
       </div>
     </div>
   );
