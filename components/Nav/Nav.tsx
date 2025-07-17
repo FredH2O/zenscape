@@ -8,7 +8,7 @@ const NavMenu: string[] = [
 
 const Nav = () => {
   return (
-    <nav className="fixed top-0 left-0 z-20 w-full py-15">
+    <nav className="fixed top-[100px] md:top-[40px] left-0 z-20 w-full py-15">
       <ul className="flex space-x-5 justify-center">
         {NavMenu.map((title, index) => (
           <li
