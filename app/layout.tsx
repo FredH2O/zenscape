@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import AnnouncementBar from "@/components/AnnouncementBar/AnnouncementBar";
+import TopBar from "@/components/TopBar/TopBar";
 
 const notoSans = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -22,9 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={` ${notoSans.variable} antialiased`}>
+      <body className={`relative ${notoSans.variable} antialiased`}>
         <AnnouncementBar />
-        <Nav />
+        <header className="">
+          <TopBar />
+          <Nav />
+        </header>
+
         <main>{children}</main>
       </body>
     </html>
