@@ -8,8 +8,8 @@ const NavMenu: string[] = [
 
 const Nav = () => {
   return (
-    <nav className="left-0 z-20 w-full py-15">
-      <ul className="flex space-x-5 justify-center">
+    <nav className="border mx-auto py-4">
+      <ul className="flex gap-5 justify-center text-xl">
         {NavMenu.map((title, index) => (
           <li
             className="cursor-pointer hover:text-green-500 transition-all duration-300"
