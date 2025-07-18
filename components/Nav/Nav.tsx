@@ -5,8 +5,9 @@ import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 
 import { useState } from "react";
+import NavMenu from "./NavMenu";
 
-const NavMenu: string[] = [
+const navItems: string[] = [
   "Home",
   "Services",
   "Reviews",
@@ -26,14 +27,7 @@ const Nav = () => {
       {/* large screen and tablet */}
       <div className="flex justify-center">
         <ul className="md:flex gap-5 hidden justify-center text-xl">
-          {NavMenu.map((title, index) => (
-            <li
-              className="cursor-pointer hover:text-slate-500 transition-all duration-300"
-              key={index}
-            >
-              <a href="">{title}</a>
-            </li>
-          ))}
+          <NavMenu NavMenuArray={navItems} />
         </ul>
       </div>
 
@@ -45,7 +39,7 @@ const Nav = () => {
         {burgerMenu && (
           <div className="fixed top-0 w-full h-screen z-50">
             <div
-              className="h-screen bg-black/50"
+              className="w-full h-full bg-black/50"
               onClick={handleToggleMenu}
             ></div>
             <div className="fixed flex justify-start p-10 items-start top-0 h-screen bg-emerald-500 w-[70%]">
@@ -60,14 +54,7 @@ const Nav = () => {
                 animate={{ opacity: 1, x: 0 }}
                 className="flex flex-col md:hidden gap-5 justify-center text-xl"
               >
-                {NavMenu.map((title, index) => (
-                  <li
-                    className="cursor-pointer hover:text-slate-500 transition-all duration-300"
-                    key={index}
-                  >
-                    <a href="">{title}</a>
-                  </li>
-                ))}
+                <NavMenu NavMenuArray={navItems} />
               </motion.ul>
             </div>
           </div>
