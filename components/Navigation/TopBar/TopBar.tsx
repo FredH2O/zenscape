@@ -1,19 +1,5 @@
 import Image from "next/image";
-import {
-  FaShoppingCart as ShoppingCartIcon,
-  FaUser as UserIcon,
-} from "react-icons/fa";
-
-const userIcons = [
-  {
-    name: "Sign-in",
-    icon: <UserIcon className="text-2xl" />,
-  },
-  {
-    name: "Cart",
-    icon: <ShoppingCartIcon className="text-2xl" />,
-  },
-];
+import UserAction from "../UserAction/UserAction";
 
 const TopBar = () => {
   return (
@@ -29,7 +15,7 @@ const TopBar = () => {
           <h1 className="text-2xl italic font-bold text-slate-600">Zenscape</h1>
         </div>
 
-        <div className="flex justify-center items-center w-[50%]">
+        <div className="flex justify-center items-center md:w-[50%] w-full">
           <input
             type="search"
             className=" bg-slate-500/50 rounded-l-full active:bg-green-500 text-white px-5 py-2.5 placeholder:text-white w-full"
@@ -40,16 +26,7 @@ const TopBar = () => {
           </button>
         </div>
 
-        <div className="flex gap-5 text-center">
-          {userIcons.map((user) => (
-            <button
-              key={user.name}
-              className="flex flex-col text-slate-600 justify-center items-center cursor-pointer"
-            >
-              {user.icon} {user.name}
-            </button>
-          ))}
-        </div>
+        <UserAction className={"hidden md:flex"} />
       </div>
     </div>
   );
