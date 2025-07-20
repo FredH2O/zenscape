@@ -1,3 +1,5 @@
+import UserAction from "../UserAction/UserAction";
+
 type NavMenuProps = {
   NavMenuArray: string[];
 };
@@ -13,6 +15,7 @@ const NavMenu = ({ NavMenuArray }: NavMenuProps) => {
           <a href="">{title}</a>
         </li>
       ))}
+      <UserAction className="flex flex-col text-left gap-5 py-3 md:hidden" />
     </>
   );
 };

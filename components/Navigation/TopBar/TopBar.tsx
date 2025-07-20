@@ -26,7 +26,7 @@ const TopBar = () => {
           </button>
         </div>
 
-        <UserAction className={"hidden md:flex"} />
+        <UserAction className={"hidden md:flex gap-3  text-slate-600"} />
       </div>
     </div>
   );

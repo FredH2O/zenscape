@@ -20,11 +20,11 @@ const userIcons = [
 
 const UserAction = ({ className }: UserActionProps) => {
   return (
-    <div className={`gap-5 text-center ${className}`}>
+    <div className={`${className}`}>
       {userIcons.map((user) => (
         <button
           key={user.name}
-          className="flex flex-col text-slate-600 justify-center items-center cursor-pointer"
+          className="flex md:flex-col text-sm justify-start gap-1 items-center cursor-pointer"
         >
           {user.icon} {user.name}
         </button>
