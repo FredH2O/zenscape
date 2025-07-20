@@ -3,7 +3,7 @@
 import { GiHamburgerMenu as BurgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 import { useState } from "react";
 import NavMenu from "./NavMenu";
 
@@ -32,9 +32,18 @@ const Nav = () => {
       </div>
 
       {/* mobile screen */}
-      <div className="flex">
+      <div className="flex justify-center items-center">
+        <div className="md:hidden justify-center items-center flex">
+          <Image
+            src="/logo/zenscape-logo.png"
+            alt="Zenscape Logo"
+            width={50}
+            height={50}
+          />
+          <h1 className="text-2xl italic font-bold text-white">Zenscape</h1>
+        </div>
         <button className="md:hidden ml-auto pr-5" onClick={handleToggleMenu}>
-          <BurgerMenu />
+          <BurgerMenu className="text-xl" />
         </button>
         {burgerMenu && (
           <div className="fixed top-0 w-full h-screen z-50">

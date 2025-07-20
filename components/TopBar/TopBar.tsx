@@ -18,8 +18,8 @@ const userIcons = [
 const TopBar = () => {
   return (
     <div className="px-5 py-4 bg-emerald-50">
-      <div className="container mx-auto flex justify-evenly items-center gap-10">
-        <div className="flex justify-center items-center">
+      <div className="container mx-auto flex flex-row justify-evenly items-center gap-10">
+        <div className="md:flex justify-center items-center hidden">
           <Image
             src="/logo/zenscape-logo.png"
             alt="Zenscape Logo"
@@ -28,6 +28,7 @@ const TopBar = () => {
           />
           <h1 className="text-2xl italic font-bold text-slate-600">Zenscape</h1>
         </div>
+
         <div className="flex justify-center items-center w-[50%]">
           <input
             type="search"
