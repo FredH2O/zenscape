@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero/Hero";
+import SellingPoint from "@/components/SellingPoint/SellingPoint";
 import TestimonialBlock from "@/components/Testimonial/TestimonialBlock";
 
 export default function Home() {
@@ -6,9 +7,8 @@ export default function Home() {
     <div className="">
       <Hero />
       <div className="bg-emerald-50">
-        <div className="max-w-7xl mx-auto">
-          <TestimonialBlock />
-        </div>
+        <TestimonialBlock />
+        <SellingPoint />
       </div>
     </div>
   );

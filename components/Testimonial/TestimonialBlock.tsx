@@ -2,7 +2,7 @@ const TestimonialBlock = () => {
   const year = new Date().getFullYear();
 
   return (
-    <section className="text-slate-600 py-10">
+    <section className="text-slate-600 py-10 max-w-7xl m-auto">
       <article className="px-3">
         <p className="text-2xl text-center">
           &quot;An outstanding place for plant advice, where James shares his
