@@ -30,7 +30,7 @@ export default function RootLayout({
           <Nav />
         </header>
 
-        <main>{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );
