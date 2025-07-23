@@ -8,7 +8,7 @@ const handleAnimationComplete = () => {
 
 const Hero = () => {
   return (
-    <div className="relative md:h-screen h-[500px] md:m-0 m-3 flex justify-center items-center">
+    <div className="relative lg:h-screen h-[500px] md:m-0 m-3 flex justify-center items-center">
       <div className="absolute bg-black opacity-70 inset-0 -z-40"></div>
       <div className="absolute -z-50 rounded w-full h-full">
         <Image
@@ -19,7 +19,7 @@ const Hero = () => {
           alt="Welcome to Zenscape"
         />
       </div>
-      <div className="container z-10 max-w-screen md:h-screen h-full p-3 flex justify-center items-center backdrop-blur-xs">
+      <div className="container z-10 max-w-screen lg:h-screen h-full p-3 flex justify-center items-center backdrop-blur-xs">
         {/* title here */}
         <div className="flex flex-col md:items-start gap-3 container md:px-20 px-5">
           <SplitText
