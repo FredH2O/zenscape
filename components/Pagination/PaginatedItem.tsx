@@ -1,29 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import product from "@/data/products";
 import Image from "next/image";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import useResponsiveWindowSize from "@/hooks/useResponsiveWindowSize";
 
 const PaginatedItems = () => {
   const [startIndex, setStartIndex] = useState<number>(0);
-  const [windowSize, setWindowSize] = useState<number>(3);
-
-  useEffect(() => {
-    const updateWindowSize = () => {
-      const width = window.innerWidth;
-
-      if (width <= 425) {
-        setWindowSize(1);
-      } else if (width <= 768) {
-        setWindowSize(2);
-      } else setWindowSize(3);
-    };
-
-    updateWindowSize();
-    window.addEventListener("resize", updateWindowSize);
-
-    return () => window.removeEventListener("resize", updateWindowSize);
-  }, []);
+  const windowSize = useResponsiveWindowSize();
 
   const handleNext = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % product.length);
