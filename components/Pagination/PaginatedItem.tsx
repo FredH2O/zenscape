@@ -1,13 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import product from "@/data/products";
 import Image from "next/image";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
-const windowSize = 3;
-
 const PaginatedItems = () => {
   const [startIndex, setStartIndex] = useState<number>(0);
+  const [windowSize, setWindowSize] = useState<number>(3);
+
+  useEffect(() => {
+    const updateWindowSize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 425) {
+        setWindowSize(1);
+      } else if (width <= 768) {
+        setWindowSize(2);
+      } else setWindowSize(3);
+    };
+
+    updateWindowSize();
+    window.addEventListener("resize", updateWindowSize);
+
+    return () => window.removeEventListener("resize", updateWindowSize);
+  }, []);
 
   const handleNext = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % product.length);
@@ -27,17 +43,17 @@ const PaginatedItems = () => {
   return (
     <div className="max-w-4xl mx-auto py-10">
       <h1 className="text-2xl text-slate-600 font-bold mb-6 text-center">
-        🌿 Plant Collection
+        🌿 House Plant Collection
       </h1>
 
       <div className="relative flex justify-center items-center">
         <button
           onClick={handlePrevious}
-          className="text-slate-600 cursor-pointer px-4 py-2 rounded-lg"
+          className="text-slate-600 text-xl cursor-pointer px-4 py-2 rounded-lg"
         >
           <FaArrowCircleLeft />
         </button>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleItems.map((product) => (
             <div
               key={product.id}
@@ -57,7 +73,7 @@ const PaginatedItems = () => {
         </div>
         <button
           onClick={handleNext}
-          className="text-slate-600 cursor-pointer px-4 py-2 rounded-lg"
+          className="text-slate-600 text-xl cursor-pointer px-4 py-2 rounded-lg"
         >
           <FaArrowCircleRight />
         </button>
