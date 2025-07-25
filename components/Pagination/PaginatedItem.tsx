@@ -50,7 +50,7 @@ const PaginatedItems = () => {
                 transition={{ duration: 0.3, ease: easeInOut }}
                 exit={{ opacity: 0, x: direction === "right" ? -50 : 50 }}
                 key={product.id}
-                className="bg-white shadow-md rounded-xl p-4 text-center"
+                className="bg-white shadow-xl rounded-xl p-4 space-y-5 text-center"
               >
                 <Image
                   src={product.image}
@@ -59,10 +59,12 @@ const PaginatedItems = () => {
                   width={1000}
                   height={1000}
                 />
-                <h2 className="font-semibold text-slate-600">
+                <h2 className="font-semibold text-2xl text-slate-600">
                   {product.title}
                 </h2>
-                <p className="text-green-600 font-bold">€{product.price}</p>
+                <p className="text-green-600 font-bold text-lg">
+                  €{product.price}
+                </p>
               </motion.div>
             ))}
           </div>
