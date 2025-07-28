@@ -29,10 +29,13 @@ const PaginatedItems = () => {
   });
 
   return (
-    <div className="max-w-4xl mx-auto py-10">
-      <h1 className="text-2xl text-slate-600 font-bold mb-6 text-center">
-        🌿 House Plant Collection
+    <section>
+      <h1 className="xl:text-4xl text-3xl text-slate-600 font-bold mb-6 xl:text-left text-center">
+        Featured Collection 🌿
       </h1>
+      <p className="text-slate-500 lg:text-lg px-1 xl:px-0 mb-4 text-center xl:text-left">
+        Discover our finest picks.. crafted for now, cherished forever.
+      </p>
 
       <div className="relative flex justify-center items-center">
         <button
@@ -77,7 +80,7 @@ const PaginatedItems = () => {
           <FaArrowCircleRight />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
