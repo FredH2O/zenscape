@@ -41,7 +41,7 @@ const SeasonalCollection = () => {
               src={collection.image}
               alt={collection.title}
             />
-            <div className="absolute bottom-0 font-bold text-slate-600 shadow text-xs md:text-lg bg-white/80 rounded p-2 m-2">
+            <div className="absolute bottom-0 font-bold text-slate-600 shadow text-xs md:text-lg bg-white/50 backdrop-blur-xs rounded p-2 m-2">
               <h3>{collection.title}</h3>
             </div>
           </div>
