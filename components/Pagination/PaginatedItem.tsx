@@ -30,7 +30,7 @@ const PaginatedItems = () => {
 
   return (
     <section>
-      <h1 className="xl:text-4xl text-3xl text-slate-600 font-bold mb-6 xl:text-left text-center">
+      <h1 className="text-4xl md:text-5xl text-slate-600 font-bold mb-6 xl:text-left text-center">
         Featured Collection 🌿
       </h1>
       <p className="text-slate-500 lg:text-lg px-1 xl:px-0 mb-4 text-center xl:text-left">

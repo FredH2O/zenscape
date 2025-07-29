@@ -26,7 +26,7 @@ const gridImages = [
 const SeasonalCollection = () => {
   return (
     <section className="container m-auto text-slate-600">
-      <h2 className="xl:text-4xl text-3xl text-slate-600 font-bold mb-6 xl:text-left text-center">
+      <h2 className="text-4xl md:text-5xl text-slate-600 font-bold mb-6 xl:text-left text-center">
         Fall in love with the season 🍂
       </h2>
 

@@ -13,7 +13,9 @@ const BrowseOurRange = () => {
           height={1000}
         />
         <div className="bg-emerald-500/20 shadow-black shadow-2xl text-center lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-b-none rounded-b-2xl flex flex-col justify-center items-center px-10 py-10 space-y-10">
-          <h2 className="text-4xl">Choose the right plants for your garden.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Choose the right plants for your garden.
+          </h2>
           <p className="text-2xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
             eligendi, expedita nisi fugiat quibusdam id consequatur eos
