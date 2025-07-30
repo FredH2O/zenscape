@@ -1,5 +1,6 @@
 import BrowseOurRange from "@/components/BrowseOurRange/BrowseOurRange";
 import Hero from "@/components/Hero/Hero";
+import Motto from "@/components/Motto/Motto";
 import PaginatedItems from "@/components/Pagination/PaginatedItem";
 import SeasonalCollection from "@/components/SeasonalCollection/SeasonalCollection";
 import SellingPoint from "@/components/SellingPoint/SellingPoint";
@@ -18,6 +19,7 @@ export default function Home() {
             <SeasonalCollection />
           </div>
           <BrowseOurRange />
+          <Motto />
         </div>
       </div>
     </div>

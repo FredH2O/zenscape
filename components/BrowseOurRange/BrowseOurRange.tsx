@@ -4,7 +4,7 @@ const BrowseOurRange = () => {
   return (
     <section className="relative text-slate-700 max-w-7xl">
       <div className="lg:rounded-2xl rounded-none px-3 xl:px-0">
-        <div className="grid lg:grid-cols-2 lg:rounded-2xl shadow-2xl">
+        <div className="grid lg:grid-cols-2 lg:rounded-2xl rounded-b-2xl  shadow-2xl">
           <Image
             className="lg:rounded-l-2xl shadow-black rounded-t-2xl lg:rounded-r-none lg:h-[700px] h-[500px] object-cover"
             priority
