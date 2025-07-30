@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Navigation/Nav/Nav";
 import AnnouncementBar from "@/components/AnnouncementBar/AnnouncementBar";
-import TopBar from "@/components/Navigation/TopBar/TopBar";
+import StickyHeader from "@/components/Navigation/StickyHeader/StickyHeader";
 
 const notoSans = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -25,10 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`relative ${notoSans.variable} antialiased`}>
         <AnnouncementBar />
-        <header className="">
-          <TopBar />
-          <Nav />
-        </header>
+        <StickyHeader />
 
         <main className="">{children}</main>
       </body>
