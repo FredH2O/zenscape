@@ -13,8 +13,8 @@ const Motto = () => {
   const MottoPicked = MottosArray[index];
 
   return (
-    <div className="p-10 text-2xl text-slate-600">
-      <p className="italic">&quot;{MottoPicked}&quot;</p>
+    <div className="p-10 my-10 text-2xl text-slate-600">
+      <p className="italic font-bold">&quot;{MottoPicked}&quot;</p>
     </div>
   );
 };

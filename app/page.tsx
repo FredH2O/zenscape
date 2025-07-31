@@ -4,6 +4,7 @@ import Motto from "@/components/Motto/Motto";
 import PaginatedItems from "@/components/Pagination/PaginatedItem";
 import SeasonalCollection from "@/components/SeasonalCollection/SeasonalCollection";
 import SellingPoint from "@/components/SellingPoint/SellingPoint";
+import CustomerTestimonials from "@/components/SellingPoint/CustomerTestimonials";
 import TestimonialBlock from "@/components/Testimonial/TestimonialBlock";
 
 export default function Home() {
@@ -20,7 +21,8 @@ export default function Home() {
           </div>
           <BrowseOurRange />
           <Motto />
-        </div>
+        </div>{" "}
+        <CustomerTestimonials />
       </div>
     </div>
   );
