@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 type MarketingRibbonProps = {
   title: string;
   description: string;
+  customer?: string;
   icon: ReactNode;
 };
 
@@ -19,7 +20,14 @@ const MarketingRibbon = ({ marketingArray }: MarketingRibbonArray) => {
             <div className="w-20">{point.icon}</div>
             <div className="space-y-1">
               <h3 className="text-xl xl:text-2xl">{point.title}</h3>
-              <p className="text-sm lg:text-[15px]">{point.description}</p>
+              <div className="flex flex-col justify-center items-end">
+                <p className="text-sm lg:text-[15px]">{point.description}</p>
+                {point.customer && (
+                  <p className="italic text-xs font-semibold">
+                    -{point.customer}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         ))}
