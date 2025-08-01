@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
+import { easeInOut, motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <section className="py-12 px-6 bg-white">
+    <motion.section
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 1, ease: easeInOut }}
+      className="py-12 px-6 bg-white"
+    >
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
         <Image
           src="/images/owner.jpg"
@@ -27,7 +35,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
