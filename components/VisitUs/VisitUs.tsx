@@ -27,11 +27,11 @@ const VisitUs = () => {
   return (
     <section className="space-y-5 py-10 px-3">
       <h2 className="text-4xl md:text-5xl font-bold text-slate-600">
-        Plan you adventure - visit us in Offaly
+        Plan your adventure - visit us in Offaly
       </h2>
       <p className="font-bold text-slate-600">
         Enjoy a wander around the greenery. Then treat yourself to a cup of
-        coffee and something nice to ear in our café.{" "}
+        coffee and something nice to eat in our café.{" "}
       </p>
       <div className="relative grid md:grid-cols-3 grid-cols-1 gap-5 ">
         {visitUs.map((item) => (

@@ -7,6 +7,7 @@ import SellingPoint from "@/components/SellingPoint/SellingPoint";
 import CustomerTestimonials from "@/components/SellingPoint/CustomerTestimonials";
 import TestimonialBlock from "@/components/Testimonial/TestimonialBlock";
 import VisitUs from "@/components/VisitUs/VisitUs";
+import AboutUs from "@/components/AboutUs/AboutUs";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <CustomerTestimonials />
         <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
           <VisitUs />
+          <AboutUs />
         </div>
       </div>
     </div>
