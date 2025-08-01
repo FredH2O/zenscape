@@ -8,6 +8,7 @@ import CustomerTestimonials from "@/components/SellingPoint/CustomerTestimonials
 import TestimonialBlock from "@/components/Testimonial/TestimonialBlock";
 import VisitUs from "@/components/VisitUs/VisitUs";
 import AboutUs from "@/components/AboutUs/AboutUs";
+import Advice from "@/components/Advice/Advice";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
           <VisitUs />
           <AboutUs />
+          <Advice />
         </div>
       </div>
     </div>
