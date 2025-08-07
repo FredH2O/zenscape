@@ -9,6 +9,7 @@ import TestimonialBlock from "@/components/Testimonial/TestimonialBlock";
 import VisitUs from "@/components/VisitUs/VisitUs";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Advice from "@/components/Advice/Advice";
+import PlantWithUs from "@/components/PlantWithUs/PlantWithUs";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <VisitUs />
           <AboutUs />
           <Advice />
+          <PlantWithUs />
         </div>
       </div>
     </div>

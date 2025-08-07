@@ -18,9 +18,9 @@ const AboutUs = () => {
           width={500}
           height={400}
           priority
-          className="rounded-xl shadow-md"
+          className="rounded-xl shadow-md lg:h-full md:h-[500px]"
         />
-        <div>
+        <div className="text-center">
           <h2 className="text-2xl font-bold mb-4 text-black">
             Bringing plants to nature lovers all over{" "}
             <span className="text-emerald-500/90">Ireland</span>.

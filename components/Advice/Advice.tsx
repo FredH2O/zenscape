@@ -40,9 +40,7 @@ const advice = [
 const Advice = () => {
   return (
     <section className="text-slate-600 py-12 px-6">
-      <h2 className="text-2xl font-bold mb-2">
-        Some gardening advice for you:
-      </h2>
+      <h2 className="text-2xl font-bold mb-2">Some gardening advice for you</h2>
       <p className="mb-6">
         Fine-tune your gardening skills with our latest advice on plants,
         planting, and growing.
