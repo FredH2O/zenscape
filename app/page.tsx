@@ -10,6 +10,7 @@ import VisitUs from "@/components/VisitUs/VisitUs";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Advice from "@/components/Advice/Advice";
 import PlantWithUs from "@/components/PlantWithUs/PlantWithUs";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <PlantWithUs />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
