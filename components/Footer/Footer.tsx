@@ -81,7 +81,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-slate-500/70 p-5 text-center">
-        <p>Fred{`${new Date().getFullYear()}`}</p>
+        <a
+          href="https://github.com/FredH2O"
+          target="_blank"
+          className="hover:text-emerald-500 transition-all duration-150 italic text-sm"
+        >
+          &copy;Fred{`${new Date().getFullYear()}`}
+        </a>
       </div>
     </footer>
   );
