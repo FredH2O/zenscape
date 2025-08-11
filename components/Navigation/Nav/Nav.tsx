@@ -7,13 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import NavMenu from "./NavMenu";
 
-const navItems: string[] = [
-  "Home",
-  "Services",
-  "Reviews",
-  "Contact",
-  "About Us",
-];
+const navItems: string[] = ["Home", "Contact", "About Us"];
 
 const Nav = () => {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
