@@ -61,7 +61,7 @@ const Footer = () => {
                 className="text-slate-400 hover:text-slate-100 transition-all duration-150 ease-in-out"
                 key={link}
               >
-                <a href="#">{link}</a>
+                <a href="#"> {link} </a>
               </li>
             ))}
           </ul>

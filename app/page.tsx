@@ -11,11 +11,13 @@ import AboutUs from "@/components/AboutUs/AboutUs";
 import Advice from "@/components/Advice/Advice";
 import PlantWithUs from "@/components/PlantWithUs/PlantWithUs";
 import Footer from "@/components/Footer/Footer";
+import WishlistSidebar from "@/components/WishlistSidebar/WishlistSidebar";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="relative">
       <Hero />
+      <WishlistSidebar />
       <div className="bg-emerald-50 border pb-10">
         <TestimonialBlock />
         <SellingPoint />
