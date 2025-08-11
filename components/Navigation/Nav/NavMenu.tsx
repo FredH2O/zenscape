@@ -1,18 +1,24 @@
+import Link from "next/link";
 import UserAction from "../UserAction/UserAction";
 
+export type NavItem = {
+  title: string;
+  link: string;
+};
+
 type NavMenuProps = {
-  NavMenuArray: string[];
+  NavMenuArray: NavItem[];
 };
 
 const NavMenu = ({ NavMenuArray }: NavMenuProps) => {
   return (
     <>
-      {NavMenuArray.map((title, index) => (
+      {NavMenuArray.map((item, index) => (
         <li
           className="cursor-pointer hover:text-slate-500 transition-all duration-300"
           key={index}
         >
-          <a href="">{title}</a>
+          <Link href={item.link}>{item.title}</Link>
         </li>
       ))}
       <UserAction className="flex flex-col text-left gap-5 py-3 md:hidden" />

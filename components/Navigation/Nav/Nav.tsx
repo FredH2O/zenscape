@@ -5,9 +5,22 @@ import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import NavMenu from "./NavMenu";
+import NavMenu, { NavItem } from "./NavMenu";
 
-const navItems: string[] = ["Home", "Contact", "About Us"];
+const navItems: NavItem[] = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "About Us",
+    link: "/about-us",
+  },
+  {
+    title: "Contact",
+    link: "/contact",
+  },
+];
 
 const Nav = () => {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
