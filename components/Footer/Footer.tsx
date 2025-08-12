@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaSpotify } from "react-icons/fa";
+
 const informationLinks = [
   "Search",
   "Advice",
@@ -14,6 +16,33 @@ const adviceLinks = [
   "Fruit Tree Rootstocks",
   "Pruning Apple Trees",
   "Resources",
+];
+
+const socialLinks = [
+  {
+    id: 1,
+    icon: <FaFacebook />,
+    href: "https://www.facebook.com/",
+    color: "text-blue-500",
+  },
+  {
+    id: 2,
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/",
+    color: "text-pink-500",
+  },
+  {
+    id: 3,
+    icon: <FaLinkedin />,
+    href: "https://www.linkedin.com/",
+    color: "text-cyan-500",
+  },
+  {
+    id: 4,
+    icon: <FaSpotify />,
+    href: "https://open.spotify.com/",
+    color: "text-green-500",
+  },
 ];
 
 const Footer = () => {
@@ -78,6 +107,15 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+          <div className="flex gap-3 text-2xl">
+            {socialLinks.map((link) => (
+              <div key={link.id}>
+                <a target="_blank" className={`${link.color}`} href={link.href}>
+                  {link.icon}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="border-t border-slate-500/70 p-5 text-center">
