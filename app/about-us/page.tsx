@@ -13,7 +13,7 @@ const AboutUs = () => {
         </p>
 
         <div className="relative lg:grid-cols-2 grid-cols-1 grid place-items-center px-3">
-          <div className="static lg:absolute lg:top-30 lg:right-20 lg:z-50 rounded-xl lg:w-1/2 lg:px-10 lg:bg-slate-600/90 p-3 lg:text-white py-15">
+          <div className="static lg:absolute lg:top-30 lg:right-20 lg:z-10 rounded-xl lg:w-1/2 lg:px-10 lg:bg-slate-600/90 p-3 lg:text-white py-15">
             <h2 className="text-4xl text-center pb-3">
               We&apos;re here to get as many people to building our{" "}
               <span className="text-emerald-400 font-semibold italic text-shadow-lg">
