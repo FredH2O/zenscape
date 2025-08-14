@@ -58,7 +58,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto p-10 flex justify-center items-center">
+      <div className="max-w-6xl mx-auto p-2 flex justify-center items-center">
         <div className="grid lg:grid-cols-2 py-10">
           <div className="space-y-2 p-10">
             {/* react icon here */}
@@ -77,11 +77,11 @@ const Contact = () => {
           </div>
 
           <form
-            className="max-w-lg bg-white rounded flex justify-center border p-10 flex-col"
+            className="max-w-lg bg-emerald-200/40 rounded flex justify-center lg:p-10 p-5 flex-col"
             action=""
           >
             <h2 className="text-3xl font-semibold">Get in touch with us</h2>
-            <p>Let us know what&apos;s on your mind</p>
+            <p className="italic">Let us know what&apos;s on your mind</p>
 
             <div className="flex flex-col gap-3 py-3">
               <div className=" flex justify-center gap-3 items-center">
