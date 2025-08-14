@@ -58,7 +58,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto p-10">
+      <div className="max-w-6xl mx-auto p-10 flex justify-center items-center">
         <div className="grid lg:grid-cols-2 py-10">
           <div className="space-y-2 p-10">
             {/* react icon here */}
