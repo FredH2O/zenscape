@@ -48,8 +48,8 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-slate-600 text-white border-slate-900 border-t-2">
-      <div className="grid grid-cols-3 max-w-7xl mx-auto">
-        <div className="gap-5 flex flex-col justify-start p-20">
+      <div className="grid lg:grid-cols-3 justify-center max-w-7xl mx-auto">
+        <div className="gap-5 flex flex-col justify-start p-10">
           <p className="font-semibold">
             Zenscape has been supplying plants by mail order since 1986 and
             selling online since 2016.
@@ -82,7 +82,7 @@ const Footer = () => {
             Office Hours: Mon to Sat 10am to 4pm
           </address>
         </div>
-        <div className="gap-5 flex flex-col justify-start p-20">
+        <div className="gap-5 flex flex-col justify-start p-10">
           <h3 className="text-2xl">Information</h3>
           <ul className="space-y-1">
             {informationLinks.map((link) => (
@@ -95,7 +95,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="gap-5 flex flex-col justify-start p-20">
+        <div className="gap-5 flex flex-col justify-start p-10">
           <h3 className="text-2xl">Gardening Advice</h3>
           <ul>
             {adviceLinks.map((link) => (
