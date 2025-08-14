@@ -37,17 +37,17 @@ const contactDetails = [
 
 const Contact = () => {
   return (
-    <section className="bg-emerald-50 text-slate-700 h-screen py-10">
+    <section className="bg-emerald-50 text-slate-700 h-full py-10">
       <div className="relative w-full text-center flex flex-col justify-center items-center">
         <Image
-          className="h-[200px] w-full object-cover"
+          className="lg:h-[200px] w-full object-cover"
           src="/images/form-background.jpg"
           width={1000}
           height={1000}
           alt="Leaves to calm the mind."
         />
         <div className="absolute top-0 inset-0 bg-black/60 w-full"></div>
-        <div className="absolute top-0 text-white max-w-5xl min-h-full flex flex-col justify-center">
+        <div className="absolute top-0 text-white max-w-5xl min-h-full flex flex-col justify-center px-2">
           <h1 className="text-5xl">We&apos;d love to hear from you</h1>
           <p className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
@@ -59,7 +59,7 @@ const Contact = () => {
       </div>
 
       <div className="max-w-6xl mx-auto p-10">
-        <div className="grid grid-cols-2 py-10">
+        <div className="grid lg:grid-cols-2 py-10">
           <div className="space-y-2 p-10">
             {/* react icon here */}
             <h2 className="text-3xl font-semibold">Sales Enquiries</h2>
