@@ -64,10 +64,12 @@ const Contact = () => {
             initial={{ opacity: 0, y: 150 }}
             transition={{ ease: easeInOut, duration: 0.5 }}
             animate={{ opacity: 1, y: 0 }}
-            className="fixed top-0 left-0 justify-center flex items-center w-full h-full transition-all duration-75 ease-in z-50 text-white"
+            className="fixed top-0 left-0 justify-center p-3 flex items-center w-full h-full transition-all duration-75 ease-in z-50 text-white"
           >
-            <div className="container gap-5 mx-auto w-1/2 h-1/2 bg-emerald-900 text-start flex flex-col justify-center items-center">
-              <h2 className="text-5xl">Thank you for reaching out!</h2>
+            <div className="container gap-5 mx-auto w-full md:w-3/4 h-1/2 rounded p-5 xl:w-1/2 bg-emerald-900 text-start flex flex-col justify-center items-center">
+              <h2 className="lg:text-5xl text-4xl">
+                Thank you for reaching out!
+              </h2>
               <p>
                 We have received your message and will get back to you as soon
                 as possible!
