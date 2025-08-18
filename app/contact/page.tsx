@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 const contactDetails = [
   {
@@ -39,26 +39,48 @@ const contactDetails = [
 ];
 
 const Contact = () => {
-  const [sent, setSent] = useState<boolean>();
+  const [sent, setSent] = useState<boolean>(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.currentTarget.reset();
     setSent(true);
     console.log("message sent!");
   };
 
+  const handleClose = () => {
+    setSent(false);
+  };
+
   return (
-    <section className="relative bg-emerald-50 text-slate-700 h-full py-10">
+    <section className="bg-emerald-50 text-slate-700 h-full py-10">
       {sent && (
-        <div className="relative w-full h-screen">
+        <>
+          <div
+            onClick={handleClose}
+            className="absolute top-0 left-0 z-50 w-full h-full bg-black/80"
+          ></div>
           <motion.div
             initial={{ opacity: 0, y: 150 }}
+            transition={{ ease: easeInOut, duration: 0.5 }}
             animate={{ opacity: 1, y: 0 }}
-            className="fixed h-full w-full justify-center flex items-center transition-all duration-75 ease-in bg-emerald-500 z-50 text-white"
+            className="fixed top-0 left-0 justify-center flex items-center w-full h-full transition-all duration-75 ease-in z-50 text-white"
           >
-            <p>message sent!</p>
+            <div className="container gap-5 mx-auto w-1/2 h-1/2 bg-emerald-900 text-start flex flex-col justify-center items-center">
+              <h2 className="text-5xl">Thank you for reaching out!</h2>
+              <p>
+                We have received your message and will get back to you as soon
+                as possible!
+              </p>
+              <button
+                onClick={handleClose}
+                className="py-1 px-5 rounded bg-red-500 cursor-pointer hover:bg-red-500/80"
+              >
+                Close
+              </button>
+            </div>
           </motion.div>
-        </div>
+        </>
       )}
       <div className="relative w-full text-center flex flex-col justify-center items-center">
         {/* sent notification */}
