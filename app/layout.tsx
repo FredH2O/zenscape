@@ -4,6 +4,7 @@ import "./globals.css";
 import AnnouncementBar from "@/components/AnnouncementBar/AnnouncementBar";
 import StickyHeader from "@/components/Navigation/StickyHeader/StickyHeader";
 import Footer from "@/components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const notoSans = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -11,9 +12,38 @@ const notoSans = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Zenscape",
+  metadataBase: new URL("https://yourdomain.com"), // <-- set this to your live URL
+  title: {
+    default: "Zenscape",
+    template: "%s | Zenscape",
+  },
   description:
-    "Zenscape is a japanese inspired website flexing the beauty of japanese gardens.",
+    "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: "Zenscape",
+    description:
+      "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
+    url: "/",
+    siteName: "Zenscape",
+    images: [{ url: "/zenscape-og.png", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zenscape",
+    description:
+      "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
+    images: ["/zenscape-og.png"],
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +59,8 @@ export default function RootLayout({
 
         <main className="">{children}</main>
         <Footer />
+
+        <Analytics />
       </body>
     </html>
   );
