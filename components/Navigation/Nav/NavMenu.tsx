@@ -8,9 +8,10 @@ export type NavItem = {
 
 type NavMenuProps = {
   NavMenuArray: NavItem[];
+  close?: () => void;
 };
 
-const NavMenu = ({ NavMenuArray }: NavMenuProps) => {
+const NavMenu = ({ NavMenuArray, close }: NavMenuProps) => {
   return (
     <>
       {NavMenuArray.map((item, index) => (
@@ -18,7 +19,9 @@ const NavMenu = ({ NavMenuArray }: NavMenuProps) => {
           className="cursor-pointer hover:text-slate-500 transition-all duration-300"
           key={index}
         >
-          <Link href={item.link}>{item.title}</Link>
+          <Link onClick={close} href={item.link}>
+            {item.title}
+          </Link>
         </li>
       ))}
       <UserAction className="flex flex-col text-left gap-5 py-3 md:hidden" />

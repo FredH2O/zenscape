@@ -25,8 +25,12 @@ const navItems: NavItem[] = [
 const Nav = () => {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
 
-  const handleToggleMenu = () => {
-    setBurgerMenu((prev) => !prev);
+  const handleOpenMenu = () => {
+    setBurgerMenu(true);
+  };
+
+  const handleCloseMenu = () => {
+    setBurgerMenu(false);
   };
 
   return (
@@ -49,18 +53,18 @@ const Nav = () => {
           />
           <h1 className="text-2xl italic font-bold text-white">Zenscape</h1>
         </div>
-        <button className="md:hidden ml-auto pr-5" onClick={handleToggleMenu}>
+        <button className="md:hidden ml-auto pr-5" onClick={handleOpenMenu}>
           <BurgerMenu className="text-xl" />
         </button>
         {burgerMenu && (
           <div className="fixed top-0 w-full h-screen z-50">
             <div
               className="w-full h-full bg-black/50"
-              onClick={handleToggleMenu}
+              onClick={handleOpenMenu}
             ></div>
             <div className="fixed flex justify-start p-10 items-start top-0 h-screen bg-emerald-500 w-[70%]">
               <button
-                onClick={handleToggleMenu}
+                onClick={handleCloseMenu}
                 className="absolute top-10 right-10"
               >
                 <IoMdClose />
@@ -70,7 +74,7 @@ const Nav = () => {
                 animate={{ opacity: 1, x: 0 }}
                 className="flex flex-col md:hidden gap-5 justify-center text-xl"
               >
-                <NavMenu NavMenuArray={navItems} />
+                <NavMenu close={handleCloseMenu} NavMenuArray={navItems} />
               </motion.ul>
             </div>
           </div>
