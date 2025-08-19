@@ -144,7 +144,7 @@ const Contact = () => {
                   placeholder="First Name"
                   type="text"
                   id="firstName"
-                  className="border py-2 w-full placeholder:text-xl rounded text-center"
+                  className="border p-2 w-full placeholder:text-md rounded text-start"
                   maxLength={20}
                 />
 
@@ -154,7 +154,7 @@ const Contact = () => {
                   type="text"
                   id="lastName"
                   maxLength={20}
-                  className="border py-2 w-full placeholder:text-xl rounded text-center"
+                  className="border p-2 w-full placeholder:text-md rounded text-start"
                 />
               </div>
 
@@ -162,14 +162,14 @@ const Contact = () => {
                 aria-label="Email"
                 type="email"
                 placeholder="Email"
-                className="border text-center py-2 rounded placeholder:text-2xl"
+                className="border text-start p-2 rounded placeholder:text-md"
               />
 
               <textarea
                 aria-label="Message"
-                placeholder="Text message"
-                rows={10}
-                className="border text-start px-3 py-2 rounded placeholder:text-2xl"
+                placeholder="Message"
+                rows={5}
+                className="border text-start p-2 rounded placeholder:text-md"
               ></textarea>
 
               <button className="bg-emerald-500 hover:bg-emerald-600 cursor-pointer p-3 rounded text-white">
