@@ -21,10 +21,14 @@ export const metadata: Metadata = {
     "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico" },
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/public/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/public/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/public/favicon.ico" },
+      {
+        url: "/public/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
   },
   openGraph: {
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
       "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
     url: "/",
     siteName: "Zenscape",
-    images: [{ url: "/zenscape-og.png", width: 1200, height: 630 }],
+    images: [{ url: "/public/zenscape-og.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
     title: "Zenscape",
     description:
       "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
-    images: ["/zenscape-og.png"],
+    images: ["/public/zenscape-og.png"],
   },
 };
 
