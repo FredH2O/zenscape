@@ -12,7 +12,7 @@ const notoSans = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"), // <-- set this to your live URL
+  metadataBase: new URL("https://zenscape-rho.vercel.app/"),
   title: {
     default: "Zenscape",
     template: "%s | Zenscape",
