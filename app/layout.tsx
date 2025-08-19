@@ -12,7 +12,7 @@ const notoSans = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zenscape-rho.vercel.app/"),
+  metadataBase: new URL("https://zenscape-rho.vercel.app/"), // <-- set this to your live URL
   title: {
     default: "Zenscape",
     template: "%s | Zenscape",
@@ -21,14 +21,10 @@ export const metadata: Metadata = {
     "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
   icons: {
     icon: [
-      { url: "/public/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/public/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/public/favicon.ico" },
-      {
-        url: "/public/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
@@ -37,16 +33,14 @@ export const metadata: Metadata = {
       "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
     url: "/",
     siteName: "Zenscape",
-    images: [{ url: "/public/zenscape-og.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Zenscape",
     description:
       "Step into serenity — explore the beauty of Japanese gardens with Zenscape.",
-    images: ["/public/zenscape-og.png"],
   },
 };
 
