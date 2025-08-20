@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zenscape
+
+Zenscape is a personal project built with [Next.js](https://nextjs.org), designed to practice and showcase skills in **TypeScript, React, and Tailwind CSS**, while focusing on clean and modern **UI/UX** principles. This project serves as a playground to explore front-end development techniques, component-based architecture, and interactive design patterns.
+
+Although it is a personal learning project and not a production-grade application, Zenscape represents a full effort to implement a complete, cohesive application structure. It includes modern tools and libraries such as:
+
+- **ReactBits** – for prebuilt, customizable React components.
+- **Framer Motion** – for smooth, dynamic animations and micro-interactions.
+- **Tailwind CSS** – to create responsive, utility-first styling without compromising readability.
+- **TypeScript** – for static type checking and safer code development.
+- **ChatGPT assistance** – for ideas, coding guidance, and problem-solving support throughout development.
+
+This project demonstrates practical use of **Next.js features**, including the `app` directory structure, metadata configuration, and font optimization using [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts). The goal was to maintain a **clean and intuitive interface**, while experimenting with interactive components and modern front-end techniques.
+
+## Features and Highlights
+
+- Fully responsive layout with attention to spacing, typography, and color.
+- Modular component architecture for easy reusability and maintainability.
+- Smooth animations using Framer Motion.
+- Type-safe development workflow with TypeScript.
+- Integration of third-party React components for rapid UI building.
+- Practice with Next.js’s latest app directory and routing structure.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 # or
+pnpm install
 pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
